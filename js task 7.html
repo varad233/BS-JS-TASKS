@@ -2,7 +2,6 @@
 <html>
 
 <head>
-  <title>JavaScript 7</title>
   <style>
     #train {
       position: relative;
@@ -15,26 +14,28 @@
 
   <img id="train" src="https://js.cx/clipart/train.gif">
   <p>Click the following button to handle animation.</p>
-         <input type = "button" value = "Start" onclick = "moveRight();" />
-         <input type = "button" value = "Stop" onclick = "moveRight();" />
-
+  <input type="button" value="Start" onclick="startTrainAnimation();" />
+  <input type="button" value="Stop" onclick="stopTrainAnimation();" />
 
   <script>
-    train.onclick = function() {
-      let start = Date.now();
+    let timer; // Declare a timer variable to control the animation.
 
-      let timer = setInterval(function() {
-        let timePassed = Date.now() - start;
-
-        train.style.left = timePassed / 5 + 'px';
-
-        if (timePassed > 2000) clearInterval(timer);
-
-      }, 20);
+    function startTrainAnimation() {
+      if (!timer) {
+        let start = Date.now();
+        timer = setInterval(function() {
+          let timePassed = Date.now() - start;
+          document.getElementById('train').style.left = timePassed / 5 + 'px';
+          if (timePassed > 2000) clearInterval(timer);
+        }, 20);
+      }
     }
-    
-  </script>
 
+    function stopTrainAnimation() {
+      clearInterval(timer);
+      timer = null; // Reset the timer variable to allow starting again.
+    }
+  </script>
 
 </body>
 
