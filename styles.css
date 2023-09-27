@@ -1,0 +1,46 @@
+
+.head{
+    background-color: rgb(74, 184, 224);
+    text-align: center;
+}
+h2{
+    padding-bottom: 5px;
+}
+.customcolor{
+    background-color: rgb(113, 112, 112);
+    
+}
+.cc{
+    color: white;
+    
+}
+/* Apply basic styles to the split-container */
+/* Apply basic styles to the split-container */
+.split-container {
+    display: grid;
+    grid-template-columns: 5fr 1fr; /* Left takes 6 times the width of the right */
+    height: 100vh; /* Make the container full height */
+}
+
+/* Style the left and right sections */
+.left-section, .right-section {
+    padding: 20px; /* Add some padding for spacing */
+    border: 1px solid #ccc; /* Add borders for separation */
+}
+
+.left-section {
+    background-color: rgb(222, 221, 221); /* Left section background color */
+}
+
+.right-section {
+    background-color: rgb(85, 84, 84); /* Right section background color */
+}
+p{
+    text-align: center;
+}
+.nav-item{
+    padding-left: 10px;
+    padding-right: 10px;
+    float: left;
+}
+
